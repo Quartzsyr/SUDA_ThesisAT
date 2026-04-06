@@ -1,0 +1,205 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ThesisFlow</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+  <div class="ambient ambient-c"></div>
+
+  <div id="window-shell" class="window-shell">
+    <header id="titlebar" class="titlebar">
+      <div class="titlebar-drag">
+        <div class="brand">
+          <div class="brand-mark">T</div>
+          <div class="brand-copy">
+            <strong id="app-name">ThesisFlow</strong>
+            <span>Windows thesis workspace</span>
+          </div>
+        </div>
+        <div class="titlebar-status">
+          <span class="eyebrow">Workspace</span>
+          <span id="status-pill" class="status-pill">准备就绪</span>
+        </div>
+      </div>
+      <div class="titlebar-actions">
+        <button id="about-btn" class="ghost compact icon-btn" title="关于">关于</button>
+        <button id="window-min" class="window-btn" title="最小化">?</button>
+        <button id="window-max" class="window-btn" title="最大化">□</button>
+        <button id="window-close" class="window-btn danger" title="关闭">×</button>
+      </div>
+    </header>
+
+    <div class="app-shell">
+      <aside class="sidebar glass">
+        <section class="hero-card">
+          <div class="hero-head">
+            <div>
+              <div class="eyebrow">Document</div>
+              <h1>论文工作台</h1>
+              <p>导入正文、校准封面、实时核对版式，然后一次导出 PDF 与 DOCX。</p>
+            </div>
+            <div class="hero-tools">
+              <button id="refresh-preview" class="ghost icon-btn" title="刷新预览">刷新</button>
+            </div>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <span>模板</span>
+              <strong id="metric-template">-</strong>
+            </div>
+            <div class="stat">
+              <span>封面</span>
+              <strong id="metric-cover">-</strong>
+            </div>
+            <div class="stat">
+              <span>输出</span>
+              <strong id="metric-output">-</strong>
+            </div>
+          </div>
+
+          <div class="hero-summary">
+            <strong id="doc-metrics">0 字 · 0 段</strong>
+            <span id="file-pill">未载入源文件</span>
+          </div>
+          <p id="doc-preview" class="hero-preview">这里会显示正文摘要。</p>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <div class="panel-label">Project</div>
+              <h2>项目设置</h2>
+              <p>把输入、输出和编辑入口集中在一个面板里。</p>
+            </div>
+          </div>
+
+          <label class="field">
+            <span>模板</span>
+            <select id="template-select"></select>
+          </label>
+
+          <label class="field">
+            <span>源文件</span>
+            <div class="inline-field">
+              <input id="source-path" type="text" readonly placeholder="未选择 .docx 文件">
+              <button id="pick-source" class="ghost compact">导入</button>
+            </div>
+          </label>
+
+          <label class="field">
+            <span>输出位置</span>
+            <div class="inline-field">
+              <input id="output-path" type="text" readonly placeholder="选择导出文件名">
+              <button id="pick-output" class="ghost compact">选择</button>
+            </div>
+          </label>
+
+          <div class="actions">
+            <button id="open-editor" class="secondary">编辑正文</button>
+            <button id="export-files" class="primary">导出 PDF / DOCX</button>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <div class="panel-label">Cover</div>
+              <h2>封面字段</h2>
+              <p>保持和学校模板一致，字段修改会自动触发预览。</p>
+            </div>
+            <label class="switch">
+              <input id="include-cover" type="checkbox" checked>
+              <span class="switch-ui"></span>
+            </label>
+          </div>
+
+          <div class="form-grid">
+            <label class="field">
+              <span>页眉</span>
+              <input data-field="header_text" type="text">
+            </label>
+            <label class="field">
+              <span>题目</span>
+              <input data-field="thesis_title" type="text">
+            </label>
+            <label class="field">
+              <span>学院</span>
+              <input data-field="college" type="text">
+            </label>
+            <label class="field">
+              <span>年级</span>
+              <input data-field="year_grade" type="text">
+            </label>
+            <label class="field">
+              <span>专业</span>
+              <input data-field="major" type="text">
+            </label>
+            <label class="field">
+              <span>班级</span>
+              <input data-field="class_name" type="text">
+            </label>
+            <label class="field">
+              <span>学号</span>
+              <input data-field="student_id" type="text">
+            </label>
+            <label class="field">
+              <span>姓名</span>
+              <input data-field="author_name" type="text">
+            </label>
+            <label class="field">
+              <span>指导教师</span>
+              <input data-field="supervisor" type="text">
+            </label>
+            <label class="field">
+              <span>职称</span>
+              <input data-field="supervisor_title" type="text">
+            </label>
+            <label class="field full">
+              <span>提交日期</span>
+              <input data-field="date_text" type="text">
+            </label>
+          </div>
+        </section>
+      </aside>
+
+      <main class="stage glass">
+        <section class="stage-header">
+          <div class="preview-meta">
+            <div class="eyebrow">Preview</div>
+            <h2>实时 PDF 预览</h2>
+            <p id="preview-path">预览文件会生成到临时目录。</p>
+          </div>
+        </section>
+
+        <section class="preview-stage">
+          <div id="toast-host" class="toast-host"></div>
+
+          <div id="preview-empty" class="preview-empty">
+            <strong>等待生成预览</strong>
+            <p>导入文档后，右侧会显示接近真实纸张观感的 PDF 结果。</p>
+          </div>
+
+          <div id="preview-shell" class="preview-shell">
+            <div class="paper-stage">
+              <div class="paper-frame">
+                <embed id="preview-frame" type="application/pdf">
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="qrc:///qtwebchannel/qwebchannel.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
+
+

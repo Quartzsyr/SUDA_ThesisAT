@@ -1,0 +1,250 @@
+﻿QMainWindow {
+    background: #dfe9f7;
+}
+
+QWidget#Root {
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 1, y2: 1,
+        stop: 0 #f6f9ff,
+        stop: 0.45 #edf4ff,
+        stop: 1 #deeafc
+    );
+}
+
+QWidget#WindowShell {
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.92);
+    border-radius: 30px;
+}
+
+QWidget#TopBar,
+QWidget#BrandShell,
+QWidget#PreviewHeader,
+QWidget#CardInner,
+QWidget#ScrollBody {
+    background: transparent;
+    border: none;
+}
+
+QWidget#SidebarPanel,
+QWidget#PreviewPanel {
+    background: rgba(255, 255, 255, 0.86);
+    border: 1px solid #d9e6fb;
+    border-radius: 26px;
+}
+
+QWidget#HeroCard,
+QWidget#Card {
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 1, y2: 1,
+        stop: 0 rgba(255, 255, 255, 0.96),
+        stop: 1 rgba(247, 250, 255, 0.94)
+    );
+    border: 1px solid #dbe6f7;
+    border-radius: 22px;
+}
+
+QLabel {
+    background: transparent;
+    border: none;
+    color: #14213d;
+}
+
+QLabel#BrandBadge {
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 1, y2: 1,
+        stop: 0 #1d4ed8,
+        stop: 1 #0f766e
+    );
+    color: white;
+    border-radius: 21px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+QLabel#BrandTitle {
+    color: #0f172a;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+QLabel#BrandSubtitle,
+QLabel#PreviewExcerpt,
+QLabel#PreviewStatus,
+QLabel#CardDesc {
+    color: #5f6f89;
+    font-size: 12px;
+}
+
+QLabel#StatusChip,
+QLabel#FileChip {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #d5e1f3;
+    border-radius: 999px;
+    color: #274060;
+    padding: 7px 14px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+QLabel#Eyebrow {
+    color: #4f7cac;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+}
+
+QLabel#HeroTitle,
+QLabel#PreviewTitle,
+QLabel#CardTitle {
+    color: #0f172a;
+    font-weight: 800;
+}
+
+QLabel#HeroTitle {
+    font-size: 30px;
+}
+
+QLabel#PreviewTitle {
+    font-size: 24px;
+}
+
+QLabel#CardTitle {
+    font-size: 18px;
+}
+
+QLabel#HeroDesc {
+    color: #47607c;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+QLabel#MetricsLabel {
+    color: #12325b;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+QWidget[statCard="true"] {
+    background: rgba(240, 246, 255, 0.96);
+    border: 1px solid #d7e3f7;
+    border-radius: 16px;
+}
+
+QLabel[statLabel="true"] {
+    color: #6381a8;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+QLabel[statValue="true"] {
+    color: #0f172a;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+QPushButton {
+    min-height: 40px;
+    border-radius: 14px;
+    border: 1px solid #cfdcf2;
+    background: rgba(255, 255, 255, 0.97);
+    color: #0f172a;
+    padding: 0 16px;
+    font-weight: 700;
+}
+
+QPushButton:hover {
+    background: #ffffff;
+    border: 1px solid #bcd0ef;
+}
+
+QPushButton:pressed {
+    background: #eef5ff;
+}
+
+QPushButton[primary="true"] {
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 1, y2: 0,
+        stop: 0 #2563eb,
+        stop: 1 #0f766e
+    );
+    border: none;
+    color: white;
+}
+
+QPushButton[primary="true"]:hover {
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 1, y2: 0,
+        stop: 0 #1d4ed8,
+        stop: 1 #0d9488
+    );
+}
+
+QScrollArea#SidebarScroll {
+    background: transparent;
+    border: none;
+}
+
+QLineEdit,
+QComboBox,
+QTextEdit {
+    min-height: 40px;
+    border-radius: 14px;
+    border: 1px solid #d4def0;
+    background: rgba(255, 255, 255, 0.97);
+    padding: 0 12px;
+    color: #0f172a;
+    selection-background-color: #bfdbfe;
+}
+
+QTextEdit {
+    padding: 10px 12px;
+}
+
+QLineEdit:focus,
+QComboBox:focus,
+QTextEdit:focus {
+    border: 1px solid #60a5fa;
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 28px;
+}
+
+QCheckBox {
+    color: #0f172a;
+    font-weight: 700;
+    spacing: 8px;
+}
+
+QCheckBox::indicator {
+    width: 18px;
+    height: 18px;
+}
+
+QWidget#PreviewStage {
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 1, y2: 1,
+        stop: 0 #f8fbff,
+        stop: 1 #edf4ff
+    );
+    border: 1px solid #dbe6f8;
+    border-radius: 24px;
+}
+
+QWidget#PdfPreview {
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid #dfe8f6;
+    border-radius: 20px;
+}
+
+QFormLayout QLabel {
+    color: #5f6f89;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+QSplitter::handle {
+    background: transparent;
+}

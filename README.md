@@ -2,7 +2,7 @@
 
 一个面向本科论文场景的原生桌面工具，用于导入 Word 论文、补全封面字段、实时预览 PDF，并导出标准化的 PDF / DOCX。
 **[Latex模板见这里](https://github.com/Quartzsyr/Soochow-University-Thesis-Overleaf-LaTeX-Template)**
-@Tianhaoo整理
+@Tianhaoo
 ## 项目简介
 
 `SUDA_ThesisAT` 主要解决论文整理过程中的几个高频问题：

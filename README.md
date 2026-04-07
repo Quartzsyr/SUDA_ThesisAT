@@ -1,7 +1,7 @@
 # SUDA_ThesisAT
 
 一个面向本科论文场景的原生桌面工具，用于导入 Word 论文、补全封面字段、实时预览 PDF，并导出标准化的 PDF / DOCX。
-> latex用户看这里，前辈整理的模板[https://github.com/shadowofgost/sudathesis-soochow-university-latex-template](url)
+> latex用户看这里，前辈整理的模板[https://github.com/shadowofgost/sudathesis-soochow-university-latex-template]
 ## 项目简介
 
 `SUDA_ThesisAT` 主要解决论文整理过程中的几个高频问题：

@@ -1,0 +1,140 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SUDA_ThesisAT</title>
+  <meta name="description" content="一个面向本科论文整理场景的桌面工作台，支持 Word 导入、封面补全、实时 PDF 预览与最终导出。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark">S</span>
+        <span class="brand-copy">
+          <strong>SUDA_ThesisAT</strong>
+          <span>Native thesis workspace</span>
+        </span>
+      </a>
+      <a class="button button-subtle" href="https://github.com/Quartzsyr/SUDA_ThesisAT" target="_blank" rel="noreferrer">GitHub</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <div class="eyebrow">Desktop Thesis Tool</div>
+          <h1>为论文整理与导出设计的本地工作台。</h1>
+          <p>
+            SUDA_ThesisAT 聚焦最常用也最容易出错的那段流程：导入 Word 正文，补全封面字段，实时核对 PDF，最后导出规范成果。
+          </p>
+          <div class="actions">
+            <a class="button button-primary" href="https://github.com/Quartzsyr/SUDA_ThesisAT/releases/download/%E8%AE%BA%E6%96%87%E6%8E%92%E7%89%88/SUDA_ThesisAT-Setup.exe">下载 Windows 安装包</a>
+            <a class="button button-subtle" href="https://github.com/Quartzsyr/SUDA_ThesisAT" target="_blank" rel="noreferrer">查看仓库</a>
+          </div>
+          <div class="meta">
+            <span>Word 导入</span>
+            <span>封面补全</span>
+            <span>PDF 预览</span>
+            <span>PDF / DOCX 导出</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container intro-grid">
+        <div>
+          <div class="eyebrow">Overview</div>
+          <h2>克制、直接、以交付为目标。</h2>
+        </div>
+        <div class="intro-copy">
+          <p>这不是一个泛化写作平台，而是一个更适合论文定稿阶段的工具。界面围绕预览和输出组织，减少在多个软件之间反复切换的成本。</p>
+          <p>项目以原生桌面应用为核心，采用 PyQt6、PyMuPDF、python-docx 与 PyInstaller，强调离线可用、结构清晰和稳定导出。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section workflow-section">
+      <div class="container workflow-panel">
+        <div class="section-head compact-head">
+          <div class="eyebrow">Workflow</div>
+          <h2>论文排版工作流程</h2>
+        </div>
+        <div class="workflow-rail" aria-hidden="true">
+          <span class="rail-line"></span>
+          <span class="rail-glow"></span>
+        </div>
+        <div class="workflow-grid">
+          <article class="workflow-step step-1">
+            <span class="step-index">01</span>
+            <h3>导入正文</h3>
+            <p>从 Word 文档进入统一工作区。</p>
+          </article>
+          <article class="workflow-step step-2">
+            <span class="step-index">02</span>
+            <h3>补全封面</h3>
+            <p>集中填写题目、学院、导师等核心字段。</p>
+          </article>
+          <article class="workflow-step step-3">
+            <span class="step-index">03</span>
+            <h3>核对预览</h3>
+            <p>持续查看 PDF 结果，及时发现版式问题。</p>
+          </article>
+          <article class="workflow-step step-4">
+            <span class="step-index">04</span>
+            <h3>导出成果</h3>
+            <p>输出 PDF 与 DOCX，用于提交和归档。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section screenshot-section">
+      <div class="container">
+        <div class="shot-frame">
+          <img src="./assets/workspace-main.png" alt="SUDA_ThesisAT 应用界面截图">
+        </div>
+      </div>
+    </section>
+
+    <section class="section footer-section">
+      <div class="container footer-stack">
+        <div class="footer-card">
+          <div>
+            <div class="eyebrow">Download</div>
+            <h2>打开即用的本地论文工作流。</h2>
+          </div>
+          <a class="button button-primary" href="https://github.com/Quartzsyr/SUDA_ThesisAT/releases/download/%E8%AE%BA%E6%96%87%E6%8E%92%E7%89%88/SUDA_ThesisAT-Setup.exe">立即下载</a>
+        </div>
+        <div class="developer-card">
+          <div class="eyebrow">Developer</div>
+          <div class="developer-grid">
+            <div>
+              <span>开发者</span>
+              <strong>Quartz</strong>
+            </div>
+            <div>
+              <span>学校背景</span>
+              <strong>苏州大学 22 电子信息</strong>
+            </div>
+            <div>
+              <span>邮箱</span>
+              <a href="mailto:SYRQuartz@gmail.com">SYRQuartz@gmail.com</a>
+            </div>
+            <div>
+              <span>GitHub</span>
+              <a href="https://github.com/Quartzsyr/SUDA_ThesisAT" target="_blank" rel="noreferrer">Quartzsyr / SUDA_ThesisAT</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

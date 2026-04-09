@@ -6,6 +6,8 @@
 
 >[项目主页](https://quartzsyr.github.io/SUDA_ThesisAT/)
 
+<img width="371" height="101" alt="image" src="https://github.com/user-attachments/assets/e77389ef-8005-4d8d-bbce-9b1ca07d0899" />
+
 ## 项目简介
 
 `SUDA_ThesisAT` 主要解决论文整理过程中的几个高频问题：

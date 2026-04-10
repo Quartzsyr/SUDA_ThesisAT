@@ -9,6 +9,9 @@
 <img width="371" height="101" alt="image" src="https://github.com/user-attachments/assets/e77389ef-8005-4d8d-bbce-9b1ca07d0899" />
 
 ## 项目简介
+新版界面预览⬇
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f4ef57bf-a075-4dd8-b446-45c4503709dc" />
+
 
 `SUDA_ThesisAT` 主要解决论文整理过程中的几个高频问题：
 
